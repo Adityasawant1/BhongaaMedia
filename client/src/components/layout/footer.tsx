@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Separator } from "@/components/ui/separator";
 import { BsTwitterX, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { Logo } from "@/components/ui/logo";
 
 export default function Footer() {
   return (
@@ -9,7 +10,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
             <Link href="/">
-              <a className="text-2xl font-bold text-primary">Bhongaa Media</a>
+              <div className="flex items-center gap-2 cursor-pointer">
+                <Logo className="w-8 h-8" />
+                <span className="text-2xl font-bold text-primary">Bhongaa Media</span>
+              </div>
             </Link>
             <p className="text-muted-foreground">
               Transforming brands through strategic social media marketing.
@@ -19,9 +23,15 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Quick Links</h3>
             <div className="space-y-2">
-              <Link href="/about"><a className="block text-muted-foreground hover:text-primary">About</a></Link>
-              <Link href="/portfolio"><a className="block text-muted-foreground hover:text-primary">Portfolio</a></Link>
-              <Link href="/contact"><a className="block text-muted-foreground hover:text-primary">Contact</a></Link>
+              <Link href="/about">
+                <span className="block text-muted-foreground hover:text-primary cursor-pointer">About</span>
+              </Link>
+              <Link href="/portfolio">
+                <span className="block text-muted-foreground hover:text-primary cursor-pointer">Portfolio</span>
+              </Link>
+              <Link href="/contact">
+                <span className="block text-muted-foreground hover:text-primary cursor-pointer">Contact</span>
+              </Link>
             </div>
           </div>
 
