@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl"
+          className="max-w-2xl pl-4 md:pl-8 lg:pl-12"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             Digital Stories That <span className="text-primary">Drive Results</span>
