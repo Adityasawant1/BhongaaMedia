@@ -4,7 +4,7 @@ import PortfolioGrid from "@/components/portfolio/grid";
 export default function Portfolio() {
   return (
     <div className="py-20">
-      <div className="container">
+      <div className="container px-4 md:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
