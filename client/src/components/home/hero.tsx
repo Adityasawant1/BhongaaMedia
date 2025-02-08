@@ -5,50 +5,53 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="pt-20 pb-32 overflow-hidden">
-      <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              We Create <span className="text-primary">Social Media</span> Success Stories
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-lg">
-              Strategic planning, creative content, and data-driven results for your brand's social media presence.
-            </p>
-            <div className="flex gap-4">
-              <Link href="/portfolio">
-                <Button size="lg" className="text-lg">
-                  View Our Work
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg">
-                  Get in Touch
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+    <section className="relative h-screen overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 bg-black/50 z-10" /> {/* Overlay for better text readability */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source 
+            src="https://cdn.coverr.co/videos/coverr-typing-on-computer-1584/1080p.mp4" 
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                alt="Team collaborating"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </motion.div>
-        </div>
+      {/* Content Overlay */}
+      <div className="relative z-20 container h-full flex items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+            Digital Stories That <span className="text-primary">Drive Results</span>
+          </h1>
+          <p className="text-xl text-gray-200 mb-8 max-w-lg">
+            We transform brands through strategic social media marketing, creative content, and data-driven campaigns.
+          </p>
+          <div className="flex gap-4">
+            <Link href="/portfolio">
+              <Button size="lg" className="text-lg">
+                View Our Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="text-lg bg-white/10 hover:bg-white/20 text-white border-white">
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
