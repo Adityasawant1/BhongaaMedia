@@ -27,7 +27,7 @@ export default function About() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About SocialPro
+            About Bhongaa Media
           </h1>
           <p className="text-xl text-muted-foreground">
             We're a team of creative minds and strategic thinkers passionate about social media excellence.
@@ -58,7 +58,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold">Our Story</h2>
             <p className="text-lg text-muted-foreground">
-              Founded in 2020, SocialPro has helped countless brands find their voice and build meaningful connections with their audience through social media.
+              Founded in 2020, Bhongaa Media has helped countless brands find their voice and build meaningful connections with their audience through social media.
             </p>
             <p className="text-lg text-muted-foreground">
               We believe in the power of authentic storytelling and data-driven strategies to create impactful social media presence that drives real business results.
@@ -75,7 +75,7 @@ export default function About() {
           <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
             <Card className="transform transition-all duration-300 hover:shadow-lg">
               <CardContent className="pt-6">
-                <motion.h3 
+                <motion.h3
                   initial={{ scale: 0.5 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
@@ -91,7 +91,7 @@ export default function About() {
           <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
             <Card className="transform transition-all duration-300 hover:shadow-lg">
               <CardContent className="pt-6">
-                <motion.h3 
+                <motion.h3
                   initial={{ scale: 0.5 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -107,7 +107,7 @@ export default function About() {
           <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
             <Card className="transform transition-all duration-300 hover:shadow-lg">
               <CardContent className="pt-6">
-                <motion.h3 
+                <motion.h3
                   initial={{ scale: 0.5 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.4 }}

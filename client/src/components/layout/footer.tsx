@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
             <Link href="/">
-              <a className="text-2xl font-bold text-primary">SocialPro</a>
+              <a className="text-2xl font-bold text-primary">Bhongaa Media</a>
             </Link>
             <p className="text-muted-foreground">
               Transforming brands through strategic social media marketing.
@@ -54,7 +54,7 @@ export default function Footer() {
         <Separator className="my-8" />
 
         <div className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} SocialPro. All rights reserved.
+          © {new Date().getFullYear()} Bhongaa Media. All rights reserved.
         </div>
       </div>
     </footer>
