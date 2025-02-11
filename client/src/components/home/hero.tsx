@@ -17,7 +17,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
         >
           <source 
-            src="https://cdn.coverr.co/videos/coverr-typing-on-computer-1584/1080p.mp4" 
+            src="https://cdn.pixabay.com/video/2022/02/23/108640-681143995_large.mp4" 
             type="video/mp4"
           />
           Your browser does not support the video tag.

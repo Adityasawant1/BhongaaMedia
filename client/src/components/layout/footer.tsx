@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Separator } from "@/components/ui/separator";
-import { BsTwitterX, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsTwitterX, BsInstagram, BsLinkedin ,BsYoutube, BsFacebook} from "react-icons/bs";
 import { Logo } from "@/components/ui/logo";
 
 export default function Footer() {
@@ -48,15 +48,18 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Connect</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-[#1DA1F2] transition-colors">
-                <BsTwitterX className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-[#E1306C] transition-colors">
-                <BsInstagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-[#0077B5] transition-colors">
+              <a href="https://www.linkedin.com/company/bhongaa-media/?originalSubdomain=in" className="text-muted-foreground hover:text-[#1DA1F2] transition-colors">
                 <BsLinkedin className="h-6 w-6" />
               </a>
+              <a href="https://www.instagram.com/bhongaa_media/" className="text-muted-foreground hover:text-[#E1306C] transition-colors">
+                <BsInstagram className="h-6 w-6" />
+              </a>
+              <a href="https://www.facebook.com/BhongaaMedia/" className="text-muted-foreground hover:text-[#0077B5] transition-colors">
+                <BsFacebook className="h-6 w-6" />
+              </a>
+              <a href="https://www.youtube.com/@bhongamedia" className="text-muted-foreground hover:text-[#FF0000] transition-colors">
+              <BsYoutube className="h-6 w-6" />
+                </a>
             </div>
           </div>
         </div>

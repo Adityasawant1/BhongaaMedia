@@ -3,8 +3,22 @@ import Services from "@/components/home/services";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useState } from "react";
+
+const images = [
+  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
 
 export default function Home() {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <div>
       <Hero />
@@ -30,6 +44,44 @@ export default function Home() {
           </Link>
         </div>
       </motion.section>
+
+      {/* Work Section */}
+      <motion.section 
+        className="py-13 bg-muted/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Our Work
+          </h2>
+        </div>
+      </motion.section>
+
+      {/* Marquee Section */}
+      <div className="overflow-hidden mt-10 bg-muted/30 py-6"> {/* Applied bg-muted/30 */}
+        <motion.div 
+          className="flex space-x-6 w-max"
+          initial={{ x: "100%" }}
+          animate={{ x: isPaused ? 0 : "-100%" }} // Stops animation on hover
+          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        >
+          {images.map((src, index) => (
+            <motion.img 
+              key={index} 
+              src={src} 
+              alt={`Social Media ${index + 1}`} 
+              className="h-40 w-75 object-cover rounded-lg shadow-lg" // Increased width only
+              whileHover={{ scale: 1.3 }} // Slight pop-up effect
+              onHoverStart={() => setIsPaused(true)} // Pause marquee on hover
+              onHoverEnd={() => setIsPaused(false)} // Resume marquee on mouse leave
+            />
+          ))}
+        </motion.div>
+      </div>
+
+
     </div>
   );
 }

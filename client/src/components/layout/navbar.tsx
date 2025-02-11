@@ -8,9 +8,11 @@ import { Logo } from "@/components/ui/logo";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/services", label: "Service" },
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" }
+  
 ];
 
 export default function Navbar() {
@@ -40,7 +42,8 @@ export default function Navbar() {
         <Link href="/">
           <div className="flex items-center gap-2 hover:opacity-90 transition-opacity cursor-pointer">
             <Logo className="w-8 h-8" />
-            <span className="text-2xl font-bold text-primary">Bhongaa Media</span>
+            { <span className="text-2xl font-bold text-primary">Bhongaa Media</span> }
+            <img src="" alt="" />
           </div>
         </Link>
 
@@ -58,7 +61,7 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         ) : (
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-1">
             <NavLinks />
           </div>
         )}

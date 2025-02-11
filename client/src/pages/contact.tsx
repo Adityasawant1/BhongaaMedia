@@ -152,22 +152,22 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>contact@socialpro.com</span>
+                  <span>bhongaamedia@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+919890805151</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>123 Social Street, Digital City, DC 12345</span>
+                  <span>Avdhoot Plaza, Bhigwan Road, Ashok Nagar Colony, Baramati - 413102 (Near Sbi Bank)</span>
                 </div>
               </div>
             </div>
 
             <div className="aspect-[4/3] w-full rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.2922926156740714!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1647951865992!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3791.107670151546!2d74.5769104676668!3d18.15895334309021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDA5JzMyLjIiTiA3NMKwMzQnNDMuMCJF!5e0!3m2!1sen!2sin!4v1739155892201!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
