@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Logo } from "@/components/ui/logo";
+import src from "../../../../public/logo.png";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -38,14 +39,15 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-8 lg:px-12">
+       <div className="container flex h-16 items-center justify-between px-4 md:px-8 lg:px-12">
         <Link href="/">
-          <div className="flex items-center gap-2 hover:opacity-90 transition-opacity cursor-pointer">
-            <Logo className="w-8 h-8" />
-            { <span className="text-2xl font-bold text-primary">Bhongaa Media</span> }
-            <img src="" alt="" />
+          <div className="flex items-center gap-3 md:gap-4 hover:opacity-90 transition-opacity cursor-pointer">
+          <img src={src} alt="Bhongaa Media Logo" className="h-12 w-12 object-contain" />
+            <span className="text-2xl font-bold text-primary">Bhongaa Media</span>
+            
           </div>
         </Link>
+      
 
         {isMobile ? (
           <Sheet>

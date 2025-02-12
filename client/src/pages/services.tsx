@@ -39,8 +39,7 @@ const services = [
     icon: MessageCircle,
     title: "Social Listening",
     description: "Monitoring conversations and trends relevant to your brand."
-  },
-  
+  }
 ];
 
 const container = {

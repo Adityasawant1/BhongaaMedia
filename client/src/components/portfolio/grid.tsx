@@ -2,34 +2,19 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
-import src from "../../../../public/portfolio/2.10 2.jpg";
 
-
-// Extended portfolio items with additional images
 const portfolioItems = [
   {
     title: "Tech Startup Launch",
     description: "Comprehensive social media campaign that increased brand awareness by 300%",
-    image: src,
+    image: "/images/portfolio/2.jpg",
     additionalImages: [
-      "/portfolio/tech-startup-1.jpg",
-      "/portfolio/tech-startup-2.jpg",
-      "/portfolio/tech-startup-3.jpg"
+      "/images/portfolio/1.png",
+      "/images/portfolio/1.png",
+      "/images/portfolio/2.jpg"
     ],
     fullDescription: "Our comprehensive social media strategy helped this tech startup achieve remarkable growth. Through targeted content and engagement campaigns, we established their brand voice and built a strong community of early adopters."
   },
-  {
-    title: "Business Logo",
-    description: "Instagram-focused campaign that doubled follower count in 3 months",
-    image: "https://images.unsplash.com/photo-1504805572947-34fad45aed93",
-    additionalImages: [
-      "https://images.unsplash.com/photo-1445205170230-053b83016050",
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b",
-      "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93"
-    ],
-    fullDescription: "Working closely with this emerging fashion brand, we developed a visual-first Instagram strategy that resonated with their target audience. Our approach combined lifestyle photography with engaging storytelling."
-  },
-  
 ];
 
 export default function PortfolioGrid() {
@@ -92,8 +77,6 @@ export default function PortfolioGrid() {
                   </motion.div>
                 ))}
               </div>
-
-              
             </div>
           </DialogContent>
         )}

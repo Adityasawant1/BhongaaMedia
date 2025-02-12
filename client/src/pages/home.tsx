@@ -22,19 +22,19 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Services />
+      
       
       <motion.section 
-        className="py-24 bg-muted/30"
+        className="w-full py-20 bg-muted/30 flex flex-col items-center text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container text-center">
+        <div className="container max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Social Media Presence?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8">
             Let's create engaging content that resonates with your audience and drives real results.
           </p>
           <Link href="/contact">
@@ -47,40 +47,40 @@ export default function Home() {
 
       {/* Work Section */}
       <motion.section 
-        className="py-13 bg-muted/30"
+        className="w-full py-10 bg-muted/30 flex flex-col items-center text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Work
-          </h2>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Some Creation</h2>
       </motion.section>
 
       {/* Marquee Section */}
-      <div className="overflow-hidden mt-10 bg-muted/30 py-6"> {/* Applied bg-muted/30 */}
+      <div className="w-full overflow-hidden bg-muted/30 py-6 flex justify-center items-center">
         <motion.div 
           className="flex space-x-6 w-max"
           initial={{ x: "100%" }}
-          animate={{ x: isPaused ? 0 : "-100%" }} // Stops animation on hover
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          animate={{ x: isPaused ? 0 : "-100%" }}
+          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
         >
           {images.map((src, index) => (
-            <motion.img 
-              key={index} 
-              src={src} 
-              alt={`Social Media ${index + 1}`} 
-              className="h-40 w-75 object-cover rounded-lg shadow-lg" // Increased width only
-              whileHover={{ scale: 1.3 }} // Slight pop-up effect
-              onHoverStart={() => setIsPaused(true)} // Pause marquee on hover
-              onHoverEnd={() => setIsPaused(false)} // Resume marquee on mouse leave
-            />
+            <motion.div
+              key={index}
+              className="relative overflow-visible flex justify-center items-center"
+            >
+              <motion.img 
+                src={src} 
+                alt={`Social Media ${index + 1}`} 
+                className="h-40 w-60 object-cover rounded-lg shadow-lg"
+                whileHover={{ scale: 1.3, zIndex: 10 }} // Enlarges properly without clipping
+                transition={{ duration: 0.3 }}
+                onHoverStart={() => setIsPaused(true)}
+                onHoverEnd={() => setIsPaused(false)}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </div>
-
 
     </div>
   );
