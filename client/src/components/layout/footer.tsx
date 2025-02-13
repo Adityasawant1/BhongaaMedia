@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Separator } from "@/components/ui/separator";
 import { BsInstagram, BsLinkedin ,BsYoutube, BsFacebook} from "react-icons/bs";
 import { Logo } from "@/components/ui/logo";
-import src from "../../../../public/logo.png";
+import src from "../../../../public/MainLogo/logo.png";
 
 export default function Footer() {
   return (

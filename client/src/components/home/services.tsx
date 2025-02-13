@@ -6,7 +6,14 @@ import {
   Users,
   BarChart4,
   Camera,
-  MessageCircle
+  MessageCircle,
+  Palette,
+  ShoppingCart,
+  Globe,
+  Film,
+  Star,
+  Image,
+  Rocket
 } from "lucide-react";
 
 const services = [
@@ -40,7 +47,37 @@ const services = [
     title: "Social Listening",
     description: "Monitoring conversations and trends relevant to your brand."
   },
+  {
+    icon: Palette,
+    title: "Branding & Creative Advertising",
+    description: "Crafting unique brand identities and advertising solutions."
+  },
+  {
+    icon: ShoppingCart,
+    title: "Media Planning & Media Buying",
+    description: "Optimizing your ad placements for maximum impact and reach."
+  },
+  {
+    icon: Globe,
+    title: "Website Design & Development",
+    description: "Creating responsive and user-friendly websites tailored to your needs."
+  },
+  {
+    icon: Film,
+    title: "Video Production",
+    description: "High-quality video content that enhances your brand’s presence."
+  },
+  {
+    icon: Star,
+    title: "Influencer Marketing",
+    description: "Collaborating with top influencers to boost your brand’s credibility."
+  },
   
+  {
+    icon: Rocket,
+    title: "New Brand Launching",
+    description: "Comprehensive strategies to successfully introduce your brand to the market."
+  }
 ];
 
 const container = {

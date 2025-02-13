@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-
+import img1 from "../../../public/Images/Founder.jpg";
+import Image from "next/image"; 
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -18,7 +19,7 @@ const item = {
 
 export default function About() {
   return (
-    <div className="py-20">
+    <div className="min-h-screen flex items-center justify-center py-20">
       <div className="container px-4 md:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,20 +36,22 @@ export default function About() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ scale: 1.02 }}
-            className="relative overflow-hidden rounded-lg shadow-lg"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
-              alt="Our team at work"
-              className="w-full transform transition-transform duration-300"
-            />
-            <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative overflow-hidden rounded-lg shadow-lg w-[390px] mx-auto h-[600px]" // Adjust width
+        >
+          <img
+            src={img1} // Corrected path
+            alt="Our team at work"
+            className="w-full h-full object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
+        </motion.div>
+
+
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -61,65 +64,72 @@ export default function About() {
               Founded in 2020, Bhongaa Media has helped countless brands find their voice and build meaningful connections with their audience through social media.
             </p>
             <p className="text-lg text-muted-foreground">
-              We believe in the power of authentic storytelling and data-driven strategies to create impactful social media presence that drives real business results.
+            Multimedia has become an essential part of our lives, connecting us through diverse forms of communication. In today's digital era, multimedia companies play a vital role in crafting engaging and impactful content across various platforms. At Sharp Multimedia Services Pvt. Ltd., we are dedicated to delivering top-notch multimedia solutions that empower our clients to achieve success.
+
+The journey of Sharp Multimedia began with a strong bond formed in childhood and strengthened during college. Friends Shubham, Pranav, Tushar, and Shashank were inseparable, sharing a passion for creativity that led to endless discussions, debates, and collaborative projects. Inspired by their shared vision, they founded "Sharp Multimedia"—a name that reflects their commitment to innovation and excellence in the media industry.
+
+Sharp Multimedia was established as a hub of creativity, offering a comprehensive suite of services, including video production, graphic design, content creation, and digital marketing. Our mission is to bring our clients' ideas to life with expert-driven multimedia solutions.
+
+As the company grew, the team encountered various challenges—tight deadlines, evolving media trends, and high client expectations. However, their shared determination and the support of a skilled, dedicated team helped them navigate these obstacles, reinforcing their vision of delivering exceptional multimedia experiences.
             </p>
           </motion.div>
         </div>
 
         <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+  variants={container}
+  initial="hidden"
+  animate="show"
+  className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center text-center"
+>
+  <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+    <Card className="transform transition-all duration-300 hover:shadow-lg flex justify-center items-center">
+      <CardContent className="pt-6 text-center">
+        <motion.h3
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-primary mb-2"
         >
-          <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-            <Card className="transform transition-all duration-300 hover:shadow-lg">
-              <CardContent className="pt-6">
-                <motion.h3
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-4xl font-bold text-primary mb-2"
-                >
-                  50+
-                </motion.h3>
-                <p className="text-muted-foreground">Active Clients</p>
-              </CardContent>
-            </Card>
-          </motion.div>
+          50+
+        </motion.h3>
+        <p className="text-muted-foreground">Active Clients</p>
+      </CardContent>
+    </Card>
+  </motion.div>
 
-          <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-            <Card className="transform transition-all duration-300 hover:shadow-lg">
-              <CardContent className="pt-6">
-                <motion.h3
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-4xl font-bold text-primary mb-2"
-                >
-                  1M+
-                </motion.h3>
-                <p className="text-muted-foreground">Audience Reached</p>
-              </CardContent>
-            </Card>
-          </motion.div>
+  <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+    <Card className="transform transition-all duration-300 hover:shadow-lg flex justify-center items-center">
+      <CardContent className="pt-6 text-center">
+        <motion.h3
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-4xl font-bold text-primary mb-2"
+        >
+          1M+
+        </motion.h3>
+        <p className="text-muted-foreground">Audience Reached</p>
+      </CardContent>
+    </Card>
+  </motion.div>
 
-          <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-            <Card className="transform transition-all duration-300 hover:shadow-lg">
-              <CardContent className="pt-6">
-                <motion.h3
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-4xl font-bold text-primary mb-2"
-                >
-                  200%
-                </motion.h3>
-                <p className="text-muted-foreground">Average Growth</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.div>
+  <motion.div variants={item} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+    <Card className="transform transition-all duration-300 hover:shadow-lg flex justify-center items-center">
+      <CardContent className="pt-6 text-center">
+        <motion.h3
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-4xl font-bold text-primary mb-2"
+        >
+          200%
+        </motion.h3>
+        <p className="text-muted-foreground">Average Growth</p>
+      </CardContent>
+    </Card>
+  </motion.div>
+</motion.div>
+
       </div>
     </div>
   );

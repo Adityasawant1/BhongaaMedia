@@ -9,7 +9,7 @@ import About from "@/pages/about";
 import Portfolio from "@/pages/portfolio";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
-import Services from "@/pages/services";
+import Services from "@/components/home/services";
 
 function Router() {
   return (

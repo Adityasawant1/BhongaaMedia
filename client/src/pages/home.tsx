@@ -4,16 +4,31 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useState } from "react";
+import client1 from "../../../public/Images/Client_Logo/BaramatiGate.png";
+import client2 from "../../../public/Images/Client_Logo/CCM.png";
+import client3 from "../../../public/Images/Client_Logo/Circle.png";
+import client4 from "../../../public/Images/Client_Logo/DiaSadi.png";
+import client5 from "../../../public/Images/Client_Logo/Dnyanganga.png";
+import client6 from "../../../public/Images/Client_Logo/DosaPlaza.jpg";
+import client7 from "../../../public/Images/Client_Logo/Global.png";
+import client8 from "../../../public/Images/Client_Logo/InstaLogo.png";
+import client9 from "../../../public/Images/Client_Logo/Killer.jpeg";
+import client10 from "../../../public/Images/Client_Logo/KumssKarhati.png";
+import client11 from "../../../public/Images/Client_Logo/Lakshmi.png";
+import client12 from "../../../public/Images/Client_Logo/Latur.jpg";
+import client13 from "../../../public/Images/Client_Logo/Manashanti.jpg";
+import client14 from "../../../public/Images/Client_Logo/Rautwada.png";
+import client15 from "../../../public/Images/Client_Logo/Saad_clinic.jpg";
+import client16 from "../../../public/Images/Client_Logo/Sarswati.png";
+import client17 from "../../../public/Images/Client_Logo/SawantDairy.png";
+import client18 from "../../../public/Images/Client_Logo/shivanand logo.jpg";
+import client19 from "../../../public/Images/Client_Logo/Sindeshahi.png";
+import client20 from "../../../public/Images/Client_Logo/Skyagro.jpg";
+import client21 from "../../../public/Images/Client_Logo/TrikayaRetret.jpg";
+
 
 const images = [
-  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1562646329-0d0f4d3bf503?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13,client14  
 ];
 
 export default function Home() {
@@ -56,31 +71,38 @@ export default function Home() {
       </motion.section>
 
       {/* Marquee Section */}
-      <div className="w-full overflow-hidden bg-muted/30 py-6 flex justify-center items-center">
-        <motion.div 
-          className="flex space-x-6 w-max"
-          initial={{ x: "100%" }}
-          animate={{ x: isPaused ? 0 : "-100%" }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          {images.map((src, index) => (
+     
+      <div className="w-full overflow-hidden bg-muted/30 py-6 flex justify-center items-center relative">
             <motion.div
-              key={index}
-              className="relative overflow-visible flex justify-center items-center"
+              className="flex space-x-6 flex-nowrap w-200
+              " // Increase width
+              initial={{ x: 0 }}
+              animate={{ x: isPaused ? 0 : "-50%" }} // Adjust movement to avoid abrupt cut-off
+              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
             >
-              <motion.img 
-                src={src} 
-                alt={`Social Media ${index + 1}`} 
-                className="h-40 w-60 object-cover rounded-lg shadow-lg"
-                whileHover={{ scale: 1.3, zIndex: 10 }} // Enlarges properly without clipping
-                transition={{ duration: 0.3 }}
-                onHoverStart={() => setIsPaused(true)}
-                onHoverEnd={() => setIsPaused(false)}
-              />
+              {[...images, ...images].map((src, index) => ( // Duplicate for smooth looping
+                <motion.div
+                  key={index}
+                  className="relative flex justify-center items-center"
+                >
+                  <motion.img 
+                  src={src} 
+                  alt={`Client ${index + 1}`} 
+                  className="h-100 w-auto object-contain rounded-lg shadow-lg flex-shrink-0 cursor-pointer" 
+                  whileHover={{ scale: 1.3, zIndex: 10 }}
+                  transition={{ duration: 0.3 }}
+                  onHoverStart={() => setIsPaused(true)}
+                  onHoverEnd={() => setIsPaused(false)}
+                  onClick={() => window.open(src, "_blank")} // Opens image in new tab
+                />
+
+
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
-      </div>
+          </div>
+
+
 
     </div>
   );
