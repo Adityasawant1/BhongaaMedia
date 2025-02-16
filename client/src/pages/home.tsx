@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import client1 from "../../../public/Images/Client_Logo/BaramatiGate.png";
 import client2 from "../../../public/Images/Client_Logo/CCM.png";
 import client3 from "../../../public/Images/Client_Logo/Circle.png";
@@ -26,20 +31,16 @@ import client19 from "../../../public/Images/Client_Logo/Sindeshahi.png";
 import client20 from "../../../public/Images/Client_Logo/Skyagro.jpg";
 import client21 from "../../../public/Images/Client_Logo/TrikayaRetret.jpg";
 
-
-const images = [
-  client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13,client14  
+const imagePaths = [
+  client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13,client14,client15,client16,client17,client18,client19,client20,client21
 ];
 
 export default function Home() {
-  const [isPaused, setIsPaused] = useState(false);
-
   return (
     <div>
       <Hero />
-      
-      
-      <motion.section 
+
+      <motion.section
         className="w-full py-20 bg-muted/30 flex flex-col items-center text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -50,7 +51,8 @@ export default function Home() {
             Ready to Transform Your Social Media Presence?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Let's create engaging content that resonates with your audience and drives real results.
+            Let's create engaging content that resonates with your audience and
+            drives real results.
           </p>
           <Link href="/contact">
             <Button size="lg" className="text-lg">
@@ -61,48 +63,47 @@ export default function Home() {
       </motion.section>
 
       {/* Work Section */}
-      <motion.section 
+      <motion.section
         className="w-full py-10 bg-muted/30 flex flex-col items-center text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Some Creation</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Some Creations</h2>
       </motion.section>
 
-      {/* Marquee Section */}
-     
-      <div className="w-full overflow-hidden bg-muted/30 py-6 flex justify-center items-center relative">
-            <motion.div
-              className="flex space-x-6 flex-nowrap w-200
-              " // Increase width
-              initial={{ x: 0 }}
-              animate={{ x: isPaused ? 0 : "-50%" }} // Adjust movement to avoid abrupt cut-off
-              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-            >
-              {[...images, ...images].map((src, index) => ( // Duplicate for smooth looping
-                <motion.div
-                  key={index}
-                  className="relative flex justify-center items-center"
-                >
-                  <motion.img 
-                  src={src} 
-                  alt={`Client ${index + 1}`} 
-                  className="h-100 w-auto object-contain rounded-lg shadow-lg flex-shrink-0 cursor-pointer" 
-                  whileHover={{ scale: 1.3, zIndex: 10 }}
-                  transition={{ duration: 0.3 }}
-                  onHoverStart={() => setIsPaused(true)}
-                  onHoverEnd={() => setIsPaused(false)}
-                  onClick={() => window.open(src, "_blank")} // Opens image in new tab
+      {/* Swiper Carousel Section */}
+      <div className="w-full bg-muted/30 py-6 flex flex-col items-center">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={6}
+          loop={true}
+          autoplay={{ delay: 2000 }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 6 },
+          }}
+          className="w-4/5 pb-16" // Increased bottom padding to avoid overlap
+        >
+          {imagePaths.map((src, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex justify-center items-center">
+                <img
+                  src={src}
+                  alt={`Client ${index + 1}`}
+                  className="h-40 w-auto object-contain rounded-lg shadow-lg cursor-pointer"
                 />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-
-
+        {/* Pagination Wrapper with Increased Margin */}
+        <div className="swiper-pagination mt-6"></div> 
+      </div>
 
     </div>
   );

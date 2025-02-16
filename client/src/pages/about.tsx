@@ -66,11 +66,11 @@ export default function About() {
             <p className="text-lg text-muted-foreground">
             Multimedia has become an essential part of our lives, connecting us through diverse forms of communication. In today's digital era, multimedia companies play a vital role in crafting engaging and impactful content across various platforms. At Sharp Multimedia Services Pvt. Ltd., we are dedicated to delivering top-notch multimedia solutions that empower our clients to achieve success.
 
-The journey of Sharp Multimedia began with a strong bond formed in childhood and strengthened during college. Friends Shubham, Pranav, Tushar, and Shashank were inseparable, sharing a passion for creativity that led to endless discussions, debates, and collaborative projects. Inspired by their shared vision, they founded "Sharp Multimedia"—a name that reflects their commitment to innovation and excellence in the media industry.
+          The journey of Sharp Multimedia began with a strong bond formed in childhood and strengthened during college. Friends Shubham, Pranav, Tushar, and Shashank were inseparable, sharing a passion for creativity that led to endless discussions, debates, and collaborative projects. Inspired by their shared vision, they founded "Sharp Multimedia"—a name that reflects their commitment to innovation and excellence in the media industry.
 
-Sharp Multimedia was established as a hub of creativity, offering a comprehensive suite of services, including video production, graphic design, content creation, and digital marketing. Our mission is to bring our clients' ideas to life with expert-driven multimedia solutions.
+          Sharp Multimedia was established as a hub of creativity, offering a comprehensive suite of services, including video production, graphic design, content creation, and digital marketing. Our mission is to bring our clients' ideas to life with expert-driven multimedia solutions.
 
-As the company grew, the team encountered various challenges—tight deadlines, evolving media trends, and high client expectations. However, their shared determination and the support of a skilled, dedicated team helped them navigate these obstacles, reinforcing their vision of delivering exceptional multimedia experiences.
+          As the company grew, the team encountered various challenges—tight deadlines, evolving media trends, and high client expectations. However, their shared determination and the support of a skilled, dedicated team helped them navigate these obstacles, reinforcing their vision of delivering exceptional multimedia experiences.
             </p>
           </motion.div>
         </div>
