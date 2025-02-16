@@ -62,7 +62,7 @@ const portfolioItems = [
     title: "Business Work",
     description: "Comprehensive social media campaign that increased brand awareness by 300%",
     image: business1,
-    additionalImages: [business2,business3,business4,business5,business6,business7,business8,business9,business10,business11,business12,business13,business14],
+    additionalImages: [business2,business1,business3,business4,business5,business6,business7,business14,business9,business10,business11,business12,business8,business13],
     fullDescription:
       "Our comprehensive social media strategy helped this tech startup achieve remarkable growth. Through targeted content and engagement campaigns, we established their brand voice and built a strong community of early adopters.",
   },

@@ -51,8 +51,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Connect</h3>
             <div className="flex gap-8">
-              <a href="https://www.linkedin.com/company/bhongaa-media/?originalSubdomain=in" className="text-muted-foreground hover:text-[#1DA1F2] transition-colors">
-                <BsLinkedin className="h-8 w-8" />
+              <a href="https://www.youtube.com/@bhongamedia" className="text-muted-foreground hover:text-[#FF0000] transition-colors">
+                <BsYoutube className="h-8 w-8" />
               </a>
               <a href="https://www.instagram.com/bhongaa_media/" className="text-muted-foreground hover:text-[#E1306C] transition-colors">
                 <BsInstagram className="h-8 w-8" />
@@ -60,8 +60,8 @@ export default function Footer() {
               <a href="https://www.facebook.com/BhongaaMedia/" className="text-muted-foreground hover:text-[#0077B5] transition-colors">
                 <BsFacebook className="h-8 w-8" />
               </a>
-              <a href="https://www.youtube.com/@bhongamedia" className="text-muted-foreground hover:text-[#FF0000] transition-colors">
-                <BsYoutube className="h-8 w-8" />
+              <a href="https://www.linkedin.com/company/bhongaa-media/?originalSubdomain=in" className="text-muted-foreground hover:text-[#1DA1F2] transition-colors">
+                <BsLinkedin className="h-8 w-8" />
               </a>
             </div>
           </div>

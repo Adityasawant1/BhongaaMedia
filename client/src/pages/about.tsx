@@ -64,13 +64,13 @@ export default function About() {
               Founded in 2020, Bhongaa Media has helped countless brands find their voice and build meaningful connections with their audience through social media.
             </p>
             <p className="text-lg text-muted-foreground">
-            Multimedia has become an essential part of our lives, connecting us through diverse forms of communication. In today's digital era, multimedia companies play a vital role in crafting engaging and impactful content across various platforms. At Sharp Multimedia Services Pvt. Ltd., we are dedicated to delivering top-notch multimedia solutions that empower our clients to achieve success.
+            Creative Media has become an essential part of our lives, connecting us through diverse forms of communication.In today's digital era, creative media companies play a vital role in crafting engaging and impactful content across various platforms. At Bhongaa Media Pvt. Ltd., we are dedicated to delivering top-notch digital and visual content solutions that empower our clients to achieve success.
 
-          The journey of Sharp Multimedia began with a strong bond formed in childhood and strengthened during college. Friends Shubham, Pranav, Tushar, and Shashank were inseparable, sharing a passion for creativity that led to endless discussions, debates, and collaborative projects. Inspired by their shared vision, they founded "Sharp Multimedia"—a name that reflects their commitment to innovation and excellence in the media industry.
+The journey of Bhongaa Media began with a strong bond formed in childhood and strengthened during college. Friends Shubham, Pranav, Tushar, and Shashank were inseparable, sharing a passion for creativity that led to endless discussions, debates, and collaborative projects. Inspired by their shared vision, they founded "Bhongaa Media"—a name that reflects their commitment to innovation and excellence in the media and content creation industry.
 
-          Sharp Multimedia was established as a hub of creativity, offering a comprehensive suite of services, including video production, graphic design, content creation, and digital marketing. Our mission is to bring our clients' ideas to life with expert-driven multimedia solutions.
+Bhongaa Media was established as a hub of creativity, offering a comprehensive suite of services, including video production, graphic design, content creation, and digital marketing. Our mission is to bring our clients' ideas to life with expert-driven creative solutions.
 
-          As the company grew, the team encountered various challenges—tight deadlines, evolving media trends, and high client expectations. However, their shared determination and the support of a skilled, dedicated team helped them navigate these obstacles, reinforcing their vision of delivering exceptional multimedia experiences.
+As the company grew, the team encountered various challenges—tight deadlines, evolving digital trends, and high client expectations. However, their shared determination and the support of a skilled, dedicated team helped them navigate these obstacles, reinforcing their vision of delivering exceptional media and branding experiences.
             </p>
           </motion.div>
         </div>
