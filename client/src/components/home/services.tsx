@@ -20,74 +20,75 @@ const services = [
     icon: Megaphone,
     title: "Social Media Strategy",
     description: "Data-driven strategies tailored to your brand's goals and target audience.",
-    hiddenText: "We analyze market trends and create customized plans."
+    hiddenText: "We create customized plans by analyzing market trends, selecting the best platforms, and planning engagement strategies."
   },
   {
     icon: PenTool,
     title: "Content Creation",
     description: "Engaging visuals and copy that tell your brand's story and drive engagement.",
-    hiddenText: "Our team crafts unique and engaging content for various platforms."
+    hiddenText: "We design high-quality graphics, create video content, and craft compelling copy to maintain brand consistency."
   },
   {
     icon: Users,
     title: "Community Management",
     description: "Building and nurturing authentic relationships with your audience.",
-    hiddenText: "We manage interactions to enhance customer relationships."
+    hiddenText: "We engage with your audience, manage feedback, and collaborate with influencers to grow your community."
   },
   {
     icon: BarChart4,
     title: "Analytics & Reporting",
     description: "Comprehensive insights and metrics to track campaign performance.",
-    hiddenText: "Data-driven decisions with precise analytics."
+    hiddenText: "We provide detailed reports, track engagement metrics, and optimize strategies through data-driven insights."
   },
   {
     icon: Camera,
     title: "Photography & Video",
     description: "Professional multimedia content creation for all platforms.",
-    hiddenText: "Capturing stunning visuals that boost brand presence."
+    hiddenText: "We capture high-quality visuals, including product photography, event coverage, and brand storytelling videos to boost engagement and brand presence."
   },
   {
     icon: MessageCircle,
     title: "Social Listening",
     description: "Monitoring conversations and trends relevant to your brand.",
-    hiddenText: "Tracking audience sentiment and trends for strategic insights."
+    hiddenText: "We analyze audience sentiment, track brand mentions, and identify emerging trends to refine marketing strategies and improve customer engagement."
   },
   {
     icon: Palette,
     title: "Branding & Creative Advertising",
     description: "Crafting unique brand identities and advertising solutions.",
-    hiddenText: "We create distinctive and compelling brand visuals."
+    hiddenText: "We develop brand logos, visual identities, and compelling ad campaigns that resonate with your target audience and enhance brand recall."
   },
   {
     icon: ShoppingCart,
     title: "Media Planning & Media Buying",
     description: "Optimizing your ad placements for maximum impact and reach.",
-    hiddenText: "Ensuring cost-effective media investment strategies."
+    hiddenText: "We research, strategize, and purchase ad placements across digital and traditional media to ensure cost-effective and targeted advertising."
   },
   {
     icon: Globe,
     title: "Website Design & Development",
     description: "Creating responsive and user-friendly websites tailored to your needs.",
-    hiddenText: "We build high-performance, SEO-optimized websites."
+    hiddenText: "We design and develop high-performance, SEO-optimized websites with intuitive UI/UX for an enhanced user experience and lead generation."
   },
   {
     icon: Film,
     title: "Video Production",
     description: "High-quality video content that enhances your brand’s presence.",
-    hiddenText: "Professional video creation for storytelling and marketing."
+    hiddenText: "Our team produces professional promotional videos, animated content, testimonials, and explainer videos to maximize audience engagement."
   },
   {
     icon: Star,
     title: "Influencer Marketing",
     description: "Collaborating with top influencers to boost your brand’s credibility.",
-    hiddenText: "Leveraging influencer reach for maximum brand exposure."
+    hiddenText: "We connect brands with relevant influencers to create authentic partnerships, drive conversions, and expand brand reach effectively."
   },
   {
     icon: Rocket,
     title: "New Brand Launching",
     description: "Comprehensive strategies to successfully introduce your brand to the market.",
-    hiddenText: "Strategic launches to establish a strong market presence."
+    hiddenText: "From market research to brand positioning, we ensure a strong launch strategy that creates buzz, builds awareness, and drives early adoption."
   }
+  
 ];
 
 export default function Services() {

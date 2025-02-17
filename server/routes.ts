@@ -16,7 +16,7 @@ export function registerRoutes(app: Express): Server {
         service: "gmail",
         auth: {
           user: "practicalcopy2023@gmail.com",
-          pass: process.env.EMAIL_PASSWORD
+          pass: process.env.practical2023
         }
       });
 
